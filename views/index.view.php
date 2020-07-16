@@ -1,5 +1,5 @@
 <div class="homepage">
-  <img src="ressources/homepage-volley.png" width="1897" height="809" alt="page d'accueil">
+  <img src="ressources/volley-home.png" width="1519" height="722" alt="page d'accueil">
   <a href="resultats.php" class="btn btn-primary">
       Accéder aux résultats
   </a>
