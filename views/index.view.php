@@ -1,3 +1,10 @@
+<script>
+  if(screen.width < 800) {
+    location.href = "resultats.php";
+  }
+</script>
+
+
 <style>
   body {
     background: none;
