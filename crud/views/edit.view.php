@@ -8,6 +8,13 @@
     td {
         padding: 10px;
     }
+
+    input[type="number"] {
+        background-color: #CBCBCB;
+        color: white;
+        border-style: none;
+        padding: 10px;
+    }
 </style>
 
 <div class="content">
@@ -32,39 +39,59 @@
                 <tr class="tableheader">
                     <td colspan="2">Edit User</td>
                 </tr>
+                <?php foreach ($user as $value) { ?>
+                    
+                    <tr>
+                        <td><label>Victoires</label></td>
+                        <td>
+                            <input class="form-control txtField" id="validationServer01" 
+                                type="number" placeholder="Moyenne E4" step="1" 
+                                name="victoires" min="0" max="9999" 
+                                value="<?php echo $value['victoires']; ?>"
+                            >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Defaites</label></td>
+                        <td>
+                            <input class="form-control txtField" id="validationServer01" 
+                                type="number" placeholder="Moyenne E4" step="1" 
+                                name="defaites" min="0" max="9999" 
+                                value="<?php echo $value['defaites']; ?>"
+                            >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label style="width: inherit; padding: 0;">Sets Gagnés</label></td>
+                        <td>
+                            <input class="form-control txtField" id="validationServer01" 
+                                type="number" placeholder="Moyenne E4" step="1" 
+                                name="nb_sets_gagnes" min="0" max="9999" 
+                                value="<?php echo $value['nb_sets_gagnes']; ?>"
+                            >
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td><label style="width: inherit; padding: 0;">Points Total</label></td>
+                        <td>
+                            <input class="form-control txtField" id="validationServer01" 
+                                type="number" placeholder="Moyenne E4" step="1" 
+                                name="nb_points_total" min="0" max="9999" 
+                                value="<?php echo $value['nb_points_total']; ?>"
+                            >
+                        </td>
+                    </tr>
+
+            <?php } ?>
+
                 <tr>
-                    <td><label>Victoires</label></td>
-                    <td>
-                        <input type="text" name="victoires" class="txtField" value="<?php echo $user->victoires; ?>">
+                    <td colspan="2">
+                        <input type="submit" name="submit" value="Submit" class="btnSubmit">
                     </td>
-                </tr>
-
-                <tr>
-                    <td><label>Defaites</label></td>
-                    <td>
-                        <input type="text" name="defaites" class="txtField" value="<?php echo $user->defaites; ?>">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td><label style="width: inherit; padding: 0;">Sets Gagnés</label></td>
-                    <td>
-                        <input type="text" name="nb_sets_gagnes" class="txtField"
-                               value="<?php echo $user->nb_sets_gagnes; ?>">
-                    </td>
-
-                </tr>
-
-                <tr>
-                    <td><label style="width: inherit; padding: 0;">Points Total</label></td>
-                    <td>
-                        <input type="text" name="nb_points_total" class="txtField"
-                               value="<?php echo $user->nb_points_total; ?>">
-                    </td>
-                </tr>
-
-                <tr>
-                    <td colspan="2"><input type="submit" name="submit" value="Submit" class="btnSubmit"></td>
                 </tr>
 
             </table>
