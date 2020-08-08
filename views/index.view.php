@@ -40,7 +40,7 @@
       alt="page d'accueil">
   </div>
 
-<a href="resultats.php" class="btn btn-primary res-access">
+<a href="resultats.php?year=<?php echo date("Y"); ?>" class="btn btn-primary res-access">
   Accéder aux résultats
 </a>
 
