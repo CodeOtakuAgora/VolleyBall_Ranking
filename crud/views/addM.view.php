@@ -28,7 +28,7 @@
                     href="index.php" class="link">
                     <img style="display: block; margin-right: 5px;" alt='List' title='List' 
                         src='../ressources/crud/list.png' width='15px' height='15px'>
-                        Liste des Résultats
+                        Liste des Matchs
                 </a>
             </div>
             <table border="0" style="width: 600px; text-align: center;"
@@ -37,76 +37,81 @@
                     <th scope="col"></th>
                 </tr>
                 <tr class="tableheader">
-                    <td colspan="2">Ajout Résultats</td>
+                    <td colspan="2">Ajout Matchs</td>
                 </tr>
                 <tr>
-                    <td><label>Victoires</label></td>
+                    <td><label>Equipe1</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Victoires" step="1" 
-                            name="victoires" min="0" max="9999" value=""
+                            type="number" placeholder="Id Equipe 1 ( 1 )" step="1" 
+                            name="id_equipe1" min="1" max="9999" value=""
                         >
                     </td>
                 </tr>
                 <tr>
-                    <td><label>Defaites</label></td>
+                    <td><label>Equipe2</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Defaites" step="1" 
-                            name="defaites" min="0" max="9999" value=""
+                            type="number" placeholder="Id Equipe 2 ( 2 )" step="1" 
+                            name="id_equipe2" min="1" max="9999" value=""
                         >
                     </td>
                 </tr>
                 <tr>
-                    <td><label style="width: inherit; padding: 0;">Sets Gagnés</label></td>
+                    <td><label>Résultat</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Sets Gagnés" step="1" 
-                            name="nb_sets_gagnes" min="0" max="9999" value=""
+                            type="text" placeholder="Résultat ( Victoire / Défaite )" 
+                            name="resultat" value=""
                         >
                     </td>
                 </tr>
                 <tr>
-                    <td><label style="width: inherit; padding: 0;">Points Total</label></td>
+                    <td><label>Sets</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Points Total" step="1" 
-                            name="nb_points_total" min="0" max="9999" value=""
+                            type="text" placeholder="Sets ( 3 / 0 )" 
+                            name="sets" value=""
                         >
                     </td>
                 </tr>
                 <tr>
-                    <td><label style="width: inherit; padding: 0;">Matchs</label></td>
+                    <td><label>Score</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Matchs" step="1" 
-                            name="nb_matchs" min="0" max="9999" value=""
+                            type="text" placeholder="Score ( 25 / 21  25 / 11  25 / 20 )" 
+                            name="score" value=""
                         >
                     </td>
                 </tr>
                 <tr>
-                    <td><label style="width: inherit; padding: 0;">Année</label></td>
+                    <td><label>Points</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Année du Résultats" step="1" 
-                            name="nb_annee" min="2000" max="9999" value=""
+                            type="text" placeholder="Points ( 75 / 52 )" 
+                            name="points" value=""
                         >
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td style="text-align: right;">
-                        <select name="equipe_id">
-                            <?php
-                            // on boucle afin de récupérer toutes les annee 
-                            // afin de proposer à l'utilisateur de choisir l'annee
-                            foreach (Bdd::getInstance()->conn->query('SELECT * FROM volley_resultats') as $row) {
-                                echo '<option value="' . $row['id'] . '">' . $row['id_equipe'] . '</option>';;
-                            }
-                            ?>
-                        </select>
+                    <td><label>Pénalités</label></td>
+                    <td>
+                        <input class="form-control txtField" id="validationServer01" 
+                            type="text" placeholder="Pénalités ( RAS )" 
+                            name="penalites" value=""
+                        >
                     </td>
                 </tr>
+                <tr>
+                    <td><label style="width: inherit; padding: 0 40px 0 0;">Année</label></td>
+                    <td>
+                        <input class="form-control txtField" id="validationServer01" 
+                            type="number" placeholder="Année ( 2020 )" step="1" 
+                            name="annee" min="2000" max="9999" value=""
+                        >
+                    </td>
+                </tr>
+
                 <tr>
                     <td colspan="2">
                         <input type="submit" name="submit" value="Submit" class="btnSubmit">

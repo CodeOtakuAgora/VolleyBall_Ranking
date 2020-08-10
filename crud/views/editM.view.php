@@ -27,7 +27,7 @@
                 <a style="display: flex; justify-content: flex-end; align-items: center;" href="index.php" class="link">
                     <img style="display: block; margin-right: 5px;" alt='List' title='List'
                          src='../ressources/crud/list.png' width='15px' height='15px'/>
-                    Liste des Résultats
+                    Liste des Matchs
                 </a>
             </div>
 
@@ -37,51 +37,90 @@
                     <th scope="col"></th>
                 </tr>
                 <tr class="tableheader">
-                    <td colspan="2">Edition Résultats</td>
+                    <td colspan="2">Edition Matchs</td>
                 </tr>
                 <?php foreach ($user as $value) { ?>
                     
                     <tr>
-                        <td><label>Victoires</label></td>
+                        <td><label>Equipe1</label></td>
                         <td>
                             <input class="form-control txtField" id="validationServer01" 
                                 type="number" placeholder="Moyenne E4" step="1" 
-                                name="victoires" min="0" max="9999" 
-                                value="<?php echo $value['victoires']; ?>"
+                                name="id_equipe1" min="1" max="9999" 
+                                value="<?php echo $value['id_equipe1']; ?>"
                             >
                         </td>
                     </tr>
 
                     <tr>
-                        <td><label>Defaites</label></td>
+                        <td><label>Equipe2</label></td>
                         <td>
                             <input class="form-control txtField" id="validationServer01" 
                                 type="number" placeholder="Moyenne E4" step="1" 
-                                name="defaites" min="0" max="9999" 
-                                value="<?php echo $value['defaites']; ?>"
+                                name="id_equipe2" min="1" max="9999" 
+                                value="<?php echo $value['id_equipe2']; ?>"
                             >
                         </td>
                     </tr>
 
                     <tr>
-                        <td><label style="width: inherit; padding: 0;">Sets Gagnés</label></td>
+                        <td><label>Résultat</label></td>
                         <td>
                             <input class="form-control txtField" id="validationServer01" 
-                                type="number" placeholder="Moyenne E4" step="1" 
-                                name="nb_sets_gagnes" min="0" max="9999" 
-                                value="<?php echo $value['nb_sets_gagnes']; ?>"
+                                type="text" placeholder="Moyenne E4" name="resultat" 
+                                value="<?php echo $value['resultat']; ?>"
                             >
                         </td>
-
                     </tr>
 
                     <tr>
-                        <td><label style="width: inherit; padding: 0;">Points Total</label></td>
+                        <td><label>Sets</label></td>
+                        <td>
+                            <input class="form-control txtField" id="validationServer01" 
+                                type="text" placeholder="Moyenne E4" name="sets" 
+                                value="<?php echo $value['sets']; ?>"
+                            >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Score</label></td>
+                        <td>
+                            <input class="form-control txtField" id="validationServer01" 
+                                type="text" placeholder="Moyenne E4" name="scores" 
+                                value="<?php echo $value['scores']; ?>"
+                            >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Points</label></td>
+                        <td>
+                            <input class="form-control txtField" id="validationServer01" 
+                                type="text" placeholder="Moyenne E4" name="points" 
+                                value="<?php echo $value['points']; ?>"
+                            >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label>Pénalités</label></td>
+                        <td>
+                            <input class="form-control txtField" id="validationServer01" 
+                                type="text" placeholder="Moyenne E4" name="penalites" 
+                                value="<?php echo $value['penalites']; ?>"
+                            >
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td><label style="width: inherit; padding: 0 40px 0 0;">Année</label>
+                        </td>
                         <td>
                             <input class="form-control txtField" id="validationServer01" 
                                 type="number" placeholder="Moyenne E4" step="1" 
-                                name="nb_points_total" min="0" max="9999" 
-                                value="<?php echo $value['nb_points_total']; ?>"
+                                name="annee" min="2000" max="9999" 
+                                value="<?php echo $value['annee']; ?>"
                             >
                         </td>
                     </tr>

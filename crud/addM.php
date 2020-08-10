@@ -10,12 +10,12 @@ require_once("../include/require.php");
 if (count($_POST) > 0) {	
 	// on apelle la fonction setUser qui appartient à la classe User 
     // en lui passant en paramettre les valeurs de ce qui a été rentré dans les inputs
-    $user = Resultats::setResultats($_POST["victoires"], $_POST["defaites"], 
-        $_POST["nb_sets_gagnes"], $_POST["nb_points_total"], $_POST["nb_matchs"],
-    	$_POST["nb_annee"], $_POST["equipe_id"]);
+    $user = Matchs::setMatchs($_POST["id_equipe1"], $_POST["id_equipe2"], 
+        $_POST["resultat"], $_POST["sets"], $_POST["score"],
+    	$_POST["points"], $_POST["penalites"], $_POST["annee"]);
 
     // puis on affiche le message de succès
-    $message = "Nouveau Résultats Ajouté Avec Succès";
+    $message = "Nouveau Matchs Ajouté Avec Succès";
 }
 
 // on inclut la vue (partie visible => front) de la page

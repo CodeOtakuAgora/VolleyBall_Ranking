@@ -43,7 +43,7 @@
                     <td><label>Victoires</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Victoires" step="1" 
+                            type="number" placeholder="Nombre de Victoires ( 4 )" step="1" 
                             name="victoires" min="0" max="9999" value=""
                         >
                     </td>
@@ -52,7 +52,7 @@
                     <td><label>Defaites</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Defaites" step="1" 
+                            type="number" placeholder="Nombre de Defaites ( 1 )" step="1" 
                             name="defaites" min="0" max="9999" value=""
                         >
                     </td>
@@ -61,7 +61,7 @@
                     <td><label style="width: inherit; padding: 0;">Sets Gagnés</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Sets Gagnés" step="1" 
+                            type="number" placeholder="Nombre de Sets ( 12 )" step="1" 
                             name="nb_sets_gagnes" min="0" max="9999" value=""
                         >
                     </td>
@@ -70,8 +70,8 @@
                     <td><label style="width: inherit; padding: 0;">Points Total</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Points Total" step="1" 
-                            name="nb_points_total" min="0" max="9999" value=""
+                            type="number" placeholder="Nombre de Points ( 379 )" 
+                            step="1" name="nb_points_total" min="0" max="9999" value=""
                         >
                     </td>
                 </tr>
@@ -79,7 +79,7 @@
                     <td><label style="width: inherit; padding: 0;">Matchs</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Nombre de Matchs" step="1" 
+                            type="number" placeholder="Nombre de Matchs ( 5 )" step="1" 
                             name="nb_matchs" min="0" max="9999" value=""
                         >
                     </td>
@@ -88,7 +88,7 @@
                     <td><label style="width: inherit; padding: 0;">Année</label></td>
                     <td>
                         <input class="form-control txtField" id="validationServer01" 
-                            type="number" placeholder="Année du Résultats" step="1" 
+                            type="number" placeholder="Année du Résultats ( 2020 )" step="1" 
                             name="nb_annee" min="2000" max="9999" value=""
                         >
                     </td>
@@ -96,6 +96,7 @@
                 <tr>
                     <td></td>
                     <td style="text-align: right;">
+                        Id Equipe
                         <select name="equipe_id">
                             <?php
                             // on boucle afin de récupérer toutes les annee 

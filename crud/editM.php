@@ -13,16 +13,18 @@ $get_year = (int)$get_year;
 if (count($_POST) > 0) {
     // on apelle la fonction updateUser qui appartient à la classe User
     // en lui passant en paramettre les valeurs de ce qui a été rentré dans les inputs
-    $user = Resultats::updateResultats($_POST["victoires"], $_POST["defaites"], $_POST["nb_sets_gagnes"], $_POST["nb_points_total"], $_GET['id'], $get_year);
+    $user = Matchs::updateMatchs($_POST["id_equipe1"], $_POST["id_equipe2"], 
+    	$_POST["resultat"], $_POST["sets"], $_POST["scores"],
+    	$_POST["points"], $_POST["penalites"], $_POST["annee"], $_GET['id']);
 
     // puis on affiche le message de succès
-    $message = "Nouveau Résultats Modifié Avec Succès";
+    $message = "Nouveau Matchs Modifié Avec Succès";
 
 }
 
 // on apelle la fonction getUser qui appartient à la classe User
 // en lui passant l'id du user afin de mettre à jour uniquement le user selectionné
-$user = Resultats::getResultats($_GET["id"], $get_year);
+$user = Matchs::getMatchs($_GET["id"], $get_year);
 
 
 // on inclut la vue (partie visible => front) de la page
