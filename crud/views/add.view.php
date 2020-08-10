@@ -102,7 +102,7 @@
                             // on boucle afin de récupérer toutes les annee 
                             // afin de proposer à l'utilisateur de choisir l'annee
                             foreach (Bdd::getInstance()->conn->query('SELECT * FROM volley_resultats') as $row) {
-                                echo '<option value="' . $row['id'] . '">' . $row['id_equipe'] . '</option>';;
+                                echo '<option value="' . $row['id'] . '">' . $row['id_equipe'] . '</option>';
                             }
                             ?>
                         </select>
