@@ -36,7 +36,7 @@
     border-width: 0 3px 3px 0;
     padding: 10px;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 9;
     animation: bounce 1s infinite;
   }
   .bottom {
@@ -63,10 +63,10 @@
       alt="page d'accueil">
   </div>
 
-<a href="#!" title="voir plus" class="arrow bottom"></a>
+<a href="#redirection" title="voir plus" class="arrow bottom"></a>
 
 <a href="resultats.php?year=<?php echo date('Y', strtotime('-1 year')); ?>" 
-  class="btn btn-primary res-access">
+  class="btn btn-primary res-access" id="redirection">
   Accéder aux résultats
 </a>
 
