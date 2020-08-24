@@ -45,15 +45,15 @@
     left: calc(50% - 15px);
     bottom: 15%;
   }
-
+ 
   @keyframes bounce {
-  0%, 100% {
-    transform: translateY(10px) rotate(40deg);
+    0%, 100% {
+      transform: translateY(10px) rotate(40deg);
+    }
+    25% {
+      transform: translateY(50px) rotate(40deg);
+    }
   }
-  25% {
-    transform: translateY(50px) rotate(40deg);
-  }
-}
 </style>
 
 <div class="homepage">
@@ -85,4 +85,10 @@
       }), (3000);
     });
   });
+
+  $(function(){
+    $(".homepage img").on("click", function(event){
+      $("html, body").animate({ scrollTop: $(document).height() }, 1000);
+    });
+  })
 </script>
