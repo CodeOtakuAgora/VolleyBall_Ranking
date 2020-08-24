@@ -31,14 +31,39 @@
     width: 100px;
     height: 100px;
   }
+  .arrow {
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 9999;
+    animation: bounce 1s infinite;
+  }
+  .bottom {
+    transform: rotate(40deg);
+    position: absolute;
+    left: calc(50% - 15px);
+    bottom: 15%;
+  }
+
+  @keyframes bounce {
+  0%, 100% {
+    transform: translateY(10px) rotate(40deg);
+  }
+  25% {
+    transform: translateY(50px) rotate(40deg);
+  }
+}
 </style>
 
 <div class="homepage">
-    <img class="desk" src="ressources/volley-home.png" width="1519" height="722" 
+    <img class="desk" src="ressources/background.jpg" width="1100" height="619" 
       alt="page d'accueil">
-    <img class="mob" src="ressources/volley-home-mobile.png" width="375" height="812" 
+    <img class="mob" src="ressources/background-mobile.jpg" width="699" height="618" 
       alt="page d'accueil">
   </div>
+
+<a href="#!" title="voir plus" class="arrow bottom"></a>
 
 <a href="resultats.php?year=<?php echo date('Y', strtotime('-1 year')); ?>" 
   class="btn btn-primary res-access">
