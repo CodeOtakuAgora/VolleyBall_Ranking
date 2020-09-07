@@ -3,7 +3,7 @@
 <?php require_once('require.php');
 ?>
 
-<body <?php if ($title == "Page d'Accueil") { ?> class="maHome" <?php } ?> >
+<body <?php if (isset($title) && $title == "Page d'Accueil") { ?> class="maHome" <?php } ?> >
 
 <nav style="justify-content: center;"
      class="navbar navbar-expand-lg navbar-light bg-light">
