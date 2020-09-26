@@ -1,9 +1,13 @@
 <div class="homepage">
-    <img class="desk" src="ressources/background.jpg" width="1100" height="619" 
+    <img class="desk" src="ressources/background.jpg" width="1100" height="619"
       alt="page d'accueil">
     <img class="mob" src="ressources/background-mobile.jpg" width="699" height="618" 
       alt="page d'accueil">
-  </div>
+      <div style="position: absolute; left: -9000px;">
+        <h2>Bienvenue sur mon site de classement des équipes de Volley-Ball du 78</h2>
+        <p>Ici vous pourrez retrouver les classements et les résultats de tous les matchs par saison du championnat loisir du 78</p>
+      </div>
+</div>
 
 <a href="#redirection" title="voir plus" class="arrow bottom"></a>
 
@@ -12,6 +16,7 @@
   Accéder aux résultats
 </a>
 
+<iframe src="views/graph.view.php" frameborder="0" width="100%" height="650px"></iframe>
 
 <script>
   $( document ).ready(function() {

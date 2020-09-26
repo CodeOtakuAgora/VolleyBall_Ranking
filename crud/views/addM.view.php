@@ -15,6 +15,9 @@
         border-style: none;
         padding: 10px;
     }
+    input[type="text"], input[type="number"] {
+        width: calc(100% - 10px);
+    }
 </style>
 
 <div class="content">

@@ -14,6 +14,7 @@
         color: white;
         border-style: none;
         padding: 10px;
+        width: calc(100% - 10px);
     }
 </style>
 
@@ -110,15 +111,15 @@
 
                     <tr>
                         <td></td>
-                        <td style="text-align: right;">
+                        <td style="text-align: right; padding-right: 20px;">
                             Id Equipe
                             <select name="equipe_id">
                                 <?php
                                 // on boucle afin de récupérer toutes les annee 
                                 // afin de proposer à l'utilisateur de choisir l'annee
-                                foreach (Bdd::getInstance()->conn->query('SELECT * FROM volley_resultats') as $row) {
+                                foreach (Bdd::getInstance()->conn->query('SELECT * FROM volley_equipes') as $row) {
                                     echo '<option value="' . $row['id'] . '">' . 
-                                        $row['id_equipe'] . '</option>';
+                                        $row['id'] . '</option>';
                                 }
                                 ?>
                             </select>
