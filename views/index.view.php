@@ -11,12 +11,12 @@
 
 <a href="#redirection" title="voir plus" class="arrow bottom"></a>
 
+<iframe src="views/graph.view.php" frameborder="0" width="100%" height="100%"></iframe>
+
 <a href="resultats.php?year=<?php echo date('Y', strtotime('-1 year')); ?>" 
   class="btn btn-primary res-access" id="redirection">
   Accéder aux résultats
 </a>
-
-<iframe src="views/graph.view.php" frameborder="0" width="100%" height="650px"></iframe>
 
 <script>
   $( document ).ready(function() {

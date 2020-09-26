@@ -15,7 +15,7 @@
 </head>
 
 <body style="overflow-y: hidden;">
-	<div style="width:75%;margin: 50px auto 0;">
+	<div style="width:75%;margin: 150px auto 0;">
 		<canvas id="canvas"></canvas>
 	</div>
 
