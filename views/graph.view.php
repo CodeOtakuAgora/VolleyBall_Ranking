@@ -202,8 +202,6 @@
 			var mycanvas = document.getElementById('canvas');
 			mycanvas.width = window.screen.width;
 			mycanvas.height = window.screen.height;
-			console.log(mycanvas.width);
-			console.log(mycanvas.height);
 		}
 
 	</script>
