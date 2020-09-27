@@ -11,11 +11,22 @@
 		-webkit-user-select: none;
 		-ms-user-select: none;
 	}
+	.canvas-element {
+		width: 75%;
+		margin: 150px auto 0;
+	}
+	@media screen and (max-width: 800px)
+	{
+		.canvas-element {
+			width: 100%;
+			margin-top: 50px;
+		}
+	}
 	</style>
 </head>
 
 <body style="overflow-y: hidden;">
-	<div style="width:75%;margin: 150px auto 0;">
+	<div class="canvas-element">
 		<canvas id="canvas"></canvas>
 	</div>
 
@@ -186,6 +197,15 @@
 			var ctx = document.getElementById('canvas').getContext('2d');
 			window.myLine = new Chart(ctx, config);
 		};
+
+		if(screen.width < 800) {
+			var mycanvas = document.getElementById('canvas');
+			mycanvas.width = window.screen.width;
+			mycanvas.height = window.screen.height;
+			console.log(mycanvas.width);
+			console.log(mycanvas.height);
+		}
+
 	</script>
 </body>
 
