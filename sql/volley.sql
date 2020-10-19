@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : sam. 26 sep. 2020 à 18:49
+-- Généré le : lun. 19 oct. 2020 à 18:41
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -17,9 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
-
 --
--- Base de données :  `volley`
+-- Base de données : `volley`
 --
 
 -- Expliquation fichier sql de notre site de vente : 
@@ -33,7 +32,6 @@ SET time_zone = "+00:00";
 DROP DATABASE IF EXISTS `volley`;
 CREATE DATABASE IF NOT EXISTS `volley`;
 USE `volley`;
-
 
 -- --------------------------------------------------------
 
@@ -67,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `volley_equipes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `volley_equipes`
@@ -86,7 +84,11 @@ INSERT INTO `volley_equipes` (`id`, `nom`) VALUES
 (10, 'Pontchartain'),
 (11, 'Rambouillet'),
 (12, 'Trappes'),
-(13, 'Le Perray');
+(13, 'Le Perray'),
+(14, 'Carrières 1'),
+(15, 'Carrières 2'),
+(16, 'Marly'),
+(17, 'Beynes');
 
 -- --------------------------------------------------------
 
@@ -266,7 +268,7 @@ CREATE TABLE IF NOT EXISTS `volley_resultats` (
   `annee` int(11) NOT NULL,
   `id_equipe` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `volley_resultats`
@@ -293,7 +295,18 @@ INSERT INTO `volley_resultats` (`id`, `victoires`, `defaites`, `nb_sets_gagnes`,
 (18, 0, 8, 5, 445, 8, 2018, 3),
 (19, 2, 6, 9, 511, 8, 2018, 4),
 (20, 6, 2, 17, 574, 8, 2018, 12),
-(21, 2, 6, 6, 509, 8, 2018, 13);
+(21, 2, 6, 6, 509, 8, 2018, 13),
+(22, 0, 0, 0, 0, 0, 2020, 14),
+(23, 0, 0, 0, 0, 0, 2020, 15),
+(24, 0, 0, 0, 0, 0, 2020, 5),
+(25, 0, 0, 0, 0, 0, 2020, 3),
+(26, 0, 0, 0, 0, 0, 2020, 16),
+(27, 0, 0, 0, 0, 0, 2020, 4),
+(28, 0, 0, 0, 0, 0, 2020, 6),
+(29, 0, 0, 0, 0, 0, 2020, 8),
+(30, 0, 0, 0, 0, 0, 2020, 9),
+(31, 0, 0, 0, 0, 0, 2020, 11),
+(32, 0, 0, 0, 0, 0, 2020, 17);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -13,7 +13,7 @@
 
 <iframe src="views/graph.view.php" frameborder="0" width="100%" height="100%"></iframe>
 
-<a href="resultats.php?year=<?php echo date('Y', strtotime('-1 year')); ?>" 
+<a href="resultats.php?year=<?php echo date('Y'); ?>" 
   class="btn btn-primary res-access" id="redirection">
   Accéder aux résultats
 </a>
