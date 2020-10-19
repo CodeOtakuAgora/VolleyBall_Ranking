@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 
 <head>
 	<title>Graphe Volley</title>
@@ -41,7 +41,7 @@
 					backgroundColor: window.chartColors.red,
 					borderColor: window.chartColors.red,
 					data: [
-						0,25,80,0
+						0,25,80,null
 					],
 					fill: false,
 				}, {
@@ -51,7 +51,7 @@
 					backgroundColor: window.chartColors.orange,
 					borderColor: window.chartColors.orange,
 					data: [
-						0,0,0,0
+						null,0,0,null
 					],
 				}, {
 		            hidden: true,
@@ -96,7 +96,7 @@
 					backgroundColor: window.chartColors.grey,
 					borderColor: window.chartColors.grey,
 					data: [
-						0,62.5,80,0
+						0,62.5,80,null
 					],
 				}, {
 					hidden: true,
@@ -105,7 +105,7 @@
 					backgroundColor: window.chartColors.red,
 					borderColor: window.chartColors.red,
 					data: [
-						0,0,60,0
+						null,0,60,0
 					],
 				}, {
 					hidden: true,
@@ -114,7 +114,7 @@
 					backgroundColor: window.chartColors.orange,
 					borderColor: window.chartColors.orange,
 					data: [
-						0,0,40,0
+						null,0,40,0
 					],
 				}, {
 					hidden: true,
@@ -123,7 +123,7 @@
 					backgroundColor: window.chartColors.yellow,
 					borderColor: window.chartColors.yellow,
 					data: [
-						0,50,100,0
+						0,50,100,null
 					],
 				}, {
 					hidden: true,
@@ -141,7 +141,7 @@
 					backgroundColor: window.chartColors.blue,
 					borderColor: window.chartColors.blue,
 					data: [
-						0,75,0,0
+						0,75,null,null
 					],
 				}, {
 					hidden: true,
@@ -150,7 +150,47 @@
 					backgroundColor: window.chartColors.purple,
 					borderColor: window.chartColors.purple,
 					data: [
-						0,25,0,0
+						0,25,null,null
+					],
+				},
+				{
+					hidden: false,
+					label: 'Carrières 1',
+					fill: false,
+					backgroundColor: window.chartColors.orange,
+					borderColor: window.chartColors.orange,
+					data: [
+						null,null,0,0
+					],
+				},
+				{
+					hidden: false,
+					label: 'Carrières 2',
+					fill: false,
+					backgroundColor: window.chartColors.yellow,
+					borderColor: window.chartColors.yellow,
+					data: [
+						null,null,0,0
+					],
+				},
+				{
+					hidden: true,
+					label: 'Marly',
+					fill: false,
+					backgroundColor: window.chartColors.green,
+					borderColor: window.chartColors.green,
+					data: [
+						null,null,0,0
+					],
+				},
+				{
+					hidden: true,
+					label: 'Beynes',
+					fill: false,
+					backgroundColor: window.chartColors.blue,
+					borderColor: window.chartColors.blue,
+					data: [
+						null,null,0,0
 					],
 				}]
 			},

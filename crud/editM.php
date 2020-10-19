@@ -10,7 +10,7 @@ $get_year = htmlspecialchars(Util::getGetParam('year'));
 $get_year = (int)$get_year;
 
 // on vérifie si le formulaire à été validé
-if (count($_POST) > 0) {
+if (!empty($_POST)) {
     // on apelle la fonction updateUser qui appartient à la classe User
     // en lui passant en paramettre les valeurs de ce qui a été rentré dans les inputs
     $user = Matchs::updateMatchs($_POST["id_equipe1"], $_POST["id_equipe2"], 

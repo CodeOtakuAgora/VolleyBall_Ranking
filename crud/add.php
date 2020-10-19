@@ -7,7 +7,7 @@ $titleAdminCrud = "Ajout du CRUD Résultats";
 require_once("../include/require.php");
 
 // on vérifie si le formulaire à été validé
-if (count($_POST) > 0) {	
+if (!empty($_POST)) {	
 	// on apelle la fonction setUser qui appartient à la classe User 
     // en lui passant en paramettre les valeurs de ce qui a été rentré dans les inputs
     $user = Resultats::setResultats($_POST["victoires"], $_POST["defaites"], 

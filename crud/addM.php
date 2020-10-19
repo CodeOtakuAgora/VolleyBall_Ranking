@@ -7,7 +7,7 @@ $titleAdminCrud = "Ajout du CRUD Matchs";
 require_once("../include/require.php");
 
 // on vérifie si le formulaire à été validé
-if (count($_POST) > 0) {	
+if (!empty($_POST)) {	
 	// on apelle la fonction setUser qui appartient à la classe User 
     // en lui passant en paramettre les valeurs de ce qui a été rentré dans les inputs
     $user = Matchs::setMatchs($_POST["id_equipe1"], $_POST["id_equipe2"], 
