@@ -192,6 +192,16 @@
 					data: [
 						null,null,0,0
 					],
+				},
+				{
+					hidden: true,
+					label: 'Houilles',
+					fill: false,
+					backgroundColor: window.chartColors.purple,
+					borderColor: window.chartColors.purple,
+					data: [
+						null,null,0,0
+					],
 				}]
 			},
 			options: {
