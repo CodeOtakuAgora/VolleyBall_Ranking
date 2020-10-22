@@ -11,7 +11,7 @@
 
 <a href="#redirection" title="voir plus" class="arrow bottom"></a>
 
-<iframe src="views/graph.view.php" width="100%" height="100%" title="Graphique Volley"></iframe>
+<iframe src="views/graph.view.php" title="Graphique Volley"></iframe>
 
 <a href="resultats.php?year=<?php echo date('Y'); ?>" 
   class="btn btn-primary res-access" id="redirection">

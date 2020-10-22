@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : lun. 19 oct. 2020 à 18:41
+-- Généré le : jeu. 22 oct. 2020 à 08:26
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.3.21
 
@@ -65,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `volley_equipes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `volley_equipes`
@@ -88,7 +88,8 @@ INSERT INTO `volley_equipes` (`id`, `nom`) VALUES
 (14, 'Carrières 1'),
 (15, 'Carrières 2'),
 (16, 'Marly'),
-(17, 'Beynes');
+(17, 'Beynes'),
+(18, 'Houilles');
 
 -- --------------------------------------------------------
 
@@ -268,7 +269,7 @@ CREATE TABLE IF NOT EXISTS `volley_resultats` (
   `annee` int(11) NOT NULL,
   `id_equipe` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=34 DEFAULT CHARSET=latin1;
 
 --
 -- Déchargement des données de la table `volley_resultats`
@@ -306,7 +307,8 @@ INSERT INTO `volley_resultats` (`id`, `victoires`, `defaites`, `nb_sets_gagnes`,
 (29, 0, 0, 0, 0, 0, 2020, 8),
 (30, 0, 0, 0, 0, 0, 2020, 9),
 (31, 0, 0, 0, 0, 0, 2020, 11),
-(32, 0, 0, 0, 0, 0, 2020, 17);
+(32, 0, 0, 0, 0, 0, 2020, 17),
+(33, 0, 0, 0, 0, 0, 2020, 18);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
